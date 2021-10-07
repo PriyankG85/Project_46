@@ -42,7 +42,11 @@ function setup() {
 
 function draw() {
   background(bgImg);
-
+  if (frameCount < 160 && frameCount > 20) {
+    fill("aliceblue");
+    textSize(34);
+    text("Game Started!", width / 2 - 100, 50);
+  }
   // Adding all the functionality to the zombie
   if (zombie.isTouching(player)) {
     zombie.destroy();
